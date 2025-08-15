@@ -1,0 +1,42 @@
+{
+  "groups": [
+    {
+      "name": "easyeventbus",
+      "type": "com.tobyang.easyeventbus.EasyEventBusProperties",
+      "sourceType": "com.tobyang.easyeventbus.EasyEventBusProperties"
+    }
+  ],
+  "properties": [
+    {
+      "name": "easyeventbus.async-enabled",
+      "type": "java.lang.Boolean",
+      "description": "Whether to enable async event processing",
+      "sourceType": "com.tobyang.easyeventbus.EasyEventBusProperties"
+    },
+    {
+      "name": "easyeventbus.async-thread-pool-size",
+      "type": "java.lang.Integer",
+      "description": "Thread pool size for async event processing",
+      "sourceType": "com.tobyang.easyeventbus.EasyEventBusProperties"
+    },
+    {
+      "name": "easyeventbus.enable",
+      "type": "java.lang.Boolean",
+      "description": "Flag to enable or disable EasyEventBus",
+      "sourceType": "com.tobyang.easyeventbus.EasyEventBusProperties"
+    },
+    {
+      "name": "easyeventbus.identifier",
+      "type": "java.lang.String",
+      "description": "The identifier for the default EventBus",
+      "sourceType": "com.tobyang.easyeventbus.EasyEventBusProperties"
+    },
+    {
+      "name": "easyeventbus.max-subscribers-per-event",
+      "type": "java.lang.Integer",
+      "description": "Maximum number of subscribers per event type (for performance tuning)",
+      "sourceType": "com.tobyang.easyeventbus.EasyEventBusProperties"
+    }
+  ],
+  "hints": []
+}

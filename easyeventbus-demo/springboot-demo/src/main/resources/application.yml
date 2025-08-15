@@ -1,0 +1,28 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: easyeventbus-demo
+
+# EasyEventBus配置
+easyeventbus:
+  enable: true
+  identifier: "demo-eventbus"
+  async-enabled: true                    # 启用异步EventBus
+  async-thread-pool-size: 4              # 异步线程池大小
+
+  # 延迟事件配置
+  delayed:
+    enabled: true                        # 启用延迟事件
+    core-pool-size: 2                    # 延迟调度器线程池大小
+    thread-name-prefix: "DemoDelayed-"   # 线程名前缀
+
+# 日志配置
+logging:
+  level:
+    com.tobyang: INFO
+    com.tobyang.demo: DEBUG
+  pattern:
+    console: "%d{HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n"
+    console: "%d{yyyy-MM-dd HH:mm:ss} [%thread] %-5level %logger{36} - %msg%n"

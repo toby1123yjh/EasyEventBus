@@ -1,0 +1,46 @@
+{
+  "properties": [
+    {
+      "name": "easyeventbus.enable",
+      "type": "java.lang.Boolean",
+      "description": "是否启用EasyEventBus",
+      "defaultValue": false
+    },
+    {
+      "name": "easyeventbus.identifier",
+      "type": "java.lang.String",
+      "description": "EventBus标识符",
+      "defaultValue": "default"
+    },
+    {
+      "name": "easyeventbus.async-enabled",
+      "type": "java.lang.Boolean",
+      "description": "是否启用异步事件处理",
+      "defaultValue": false
+    },
+    {
+      "name": "easyeventbus.async-thread-pool-size",
+      "type": "java.lang.Integer",
+      "description": "异步事件处理线程池大小",
+      "defaultValue": 10
+    },
+    {
+      "name": "easyeventbus.delayed.enabled",
+      "type": "java.lang.Boolean",
+      "description": "是否启用延迟事件功能",
+      "defaultValue": true
+    },
+    {
+      "name": "easyeventbus.delayed.core-pool-size",
+      "type": "java.lang.Integer",
+      "description": "延迟事件调度器核心线程池大小",
+      "defaultValue": 2
+    },
+    {
+      "name": "easyeventbus.delayed.thread-name-prefix",
+      "type": "java.lang.String",
+      "description": "延迟事件线程名称前缀",
+      "defaultValue": "DelayedEvent-"
+    }
+  ]
+}
