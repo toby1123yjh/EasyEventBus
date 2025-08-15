@@ -127,6 +127,4 @@ Apache License 2.0
 
 **⭐ 如果这个项目对您有帮助，请给个 Star 支持！**
 
-[🐛 Issues](../../issues) · [💡 Discussions](../../discussions) · [📖 Wiki](../../wiki)
-
 </div>
