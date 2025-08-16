@@ -18,6 +18,16 @@
 - **全局拦截器** - 提供事件处理的监控和审计能力
 - **Spring Boot集成** - 零配置自动装配
 - **性能监控** - 内置性能统计和监控
+- **可扩展性** - 新增功能均保留可扩展性
+
+### 直观对比
+
+原google guava官方停止维护
+<img width="1422" height="841" alt="1755326797112" src="https://github.com/user-attachments/assets/3e83404c-d2d2-46a1-b3c3-2e18e82a074f" />
+
+新组件基于guava丰富了功能和保留可扩展性
+<img width="1522" height="1202" alt="1755326934829" src="https://github.com/user-attachments/assets/c249a97b-c0b0-49dc-adf2-11b187a96f5b" />
+
 
 ## 🚀 快速开始
 
