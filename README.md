@@ -4,7 +4,15 @@
 [![Java](https://img.shields.io/badge/Java-8+-orange.svg)](https://www.oracle.com/java/)
 [![Spring Boot](https://img.shields.io/badge/Spring%20Boot-2.x%2F3.x-green.svg)](https://spring.io/projects/spring-boot)
 
-> 🚀 **基于Google Guava EventBus的事件总线，提供完整的失败处理、重试机制和监控能力** 
+> 🚀 **AI背景下的轻量级内存事件总线，提供规范模板方法、可以自定义的失败处理、重试机制等** 
+
+## 💡 背景与理念
+
+本项目通过**内存事件总线**将单体项目进行**高度模块化**，旨在适应 **AI 编程** 背景下的 **Spec 理念** 和 **上下文工程（Context Engineering）**。
+
+引入 EasyEventBus 的核心价值在于：
+- **降低 AI 上下文负担**：得益于事件驱动的模块化设计，AI 在修改代码时**不再需要索引整个代码仓库**。每个模块只需关注特定的事件输入与输出，AI 可以聚焦于局部上下文，显著提升了代码理解深度和生成准确率。
+- **代码组织结构规范化**：不仅需求（Spec）有规范，**代码组织本身也建立了标准规范**。通过强制的“三阶段处理模式”（幂等检查 -> 业务处理 -> 失败兜底），为 AI 生成代码提供了一个清晰的结构模板，确保生成的代码天然具备健壮性和一致性。
 
 ## ✨ 核心特性
 
