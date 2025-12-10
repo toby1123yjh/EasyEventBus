@@ -1,18 +1,13 @@
 # EasyEventBus
 
-[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
-[![Java](https://img.shields.io/badge/Java-8+-orange.svg)](https://www.oracle.com/java/)
-[![Spring Boot](https://img.shields.io/badge/Spring%20Boot-2.x%2F3.x-green.svg)](https://spring.io/projects/spring-boot)
-
-> 🚀 **AI背景下的轻量级内存事件总线，提供规范模板方法、可以自定义的失败处理、重试机制等** 
-
-## 💡 背景与理念
+## 💡 重复造轮子？也许这不是件坏事，我会告诉你为什么要这么做。
 
 本项目通过**内存事件总线**将单体项目进行**高度模块化**，旨在适应 **AI 编程** 背景下的 **Spec 理念** 和 **上下文工程（Context Engineering）**。
 
 引入 EasyEventBus 的核心价值在于：
 - **降低 AI 上下文负担**：得益于事件驱动的模块化设计，AI 在修改代码时**不再需要索引整个代码仓库**。每个模块只需关注特定的事件输入与输出，AI 可以聚焦于局部上下文，显著提升了代码理解深度和生成准确率。
 - **代码组织结构规范化**：不仅需求（Spec）有规范，**代码组织本身也建立了标准规范**。通过强制的“三阶段处理模式”（幂等检查 -> 业务处理 -> 失败兜底），为 AI 生成代码提供了一个清晰的结构模板，确保生成的代码天然具备健壮性和一致性。
+- **增强可扩展性**：面对未来大概率出现的业务扩展和服务划分。
 
 ## ✨ 核心特性
 
@@ -28,9 +23,9 @@
 - **性能监控** - 内置性能统计和监控
 - **可扩展性** - 新增功能均保留可扩展性
 
-### 直观对比
+### 对比google guava
 
-原google guava官方停止维护
+google guava官方停止维护（又一个被google抛弃的仓库罢了）
 <img width="1422" height="841" alt="1755326797112" src="https://github.com/user-attachments/assets/3e83404c-d2d2-46a1-b3c3-2e18e82a074f" />
 
 新组件基于guava丰富了功能和保留可扩展性
@@ -89,7 +84,7 @@ public class OrderEventListener {
 }
 ```
 
-## 🎨 高级特性
+## 🎨 特性
 
 ### 全局拦截器 & 失败上下文
 
@@ -112,7 +107,7 @@ public void handleFailure(PaymentEvent event, FailureContext context) {
 }
 ```
 
-## 🏗️ 核心架构
+## 🏗️ 架构
 
 ### 三阶段处理模式
 ```
@@ -122,22 +117,6 @@ public void handleFailure(PaymentEvent event, FailureContext context) {
                       自动重试(@FailRetry)
 ```
 
-### 解决的关键问题
-| 问题 | 原始Guava实现 | EasyEventBus |
-|------|-----------|-------------|
-| **可靠性** | 失败后无法恢复   | 智能重试 + 失败处理 |
-| **重复处理** | 缺乏幂等性保证   | 内置幂等性检查 |
-| **可观测性** | 缺乏监控能力    | 全局拦截器 + 性能统计 |
-| **异步复杂性** | 手动管理线程池   | 开箱即用 + 延迟事件 |
-
-
-## 📚 示例项目
-
-完整示例：`easyeventbus-demo/springboot-demo`
-
-## 📄 许可证
-
-Apache License 2.0
 
 ---
 
